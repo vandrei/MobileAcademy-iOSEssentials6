@@ -29,13 +29,13 @@ class BaseController: UIViewController {
     
     // Sets title font, size and color
     func setTitleAttributes() {
-        let attributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
-                          NSAttributedStringKey.font: Fonts.regularFont(17.0)] as! [NSAttributedStringKey: Any]
+        let attributes = [NSForegroundColorAttributeName: UIColor.white,
+            NSFontAttributeName: Fonts.regularFont(17.0)] as [String : Any]
         
         self.navigationController?.navigationBar.titleTextAttributes = attributes
     }
     
     func goBack() {
-        self.navigationController?.popViewController(animated: true)
+        let _ = self.navigationController?.popViewController(animated: true)
     }
 }

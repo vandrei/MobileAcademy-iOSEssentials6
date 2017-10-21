@@ -28,7 +28,7 @@ class ColoredPlaceholderTextField: UITextField {
             return
         }
         
-        let attributes = [NSAttributedStringKey.foregroundColor: placeholderColor]
+        let attributes = [NSForegroundColorAttributeName: placeholderColor]
         let attributedPlaceholder = NSAttributedString(string: self.placeholder!, attributes: attributes)
         self.attributedPlaceholder = attributedPlaceholder
     }

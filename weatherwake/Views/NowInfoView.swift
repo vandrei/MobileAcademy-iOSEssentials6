@@ -29,7 +29,7 @@ class NowInfoView: UIView {
         // TODO: Set the image
     }
     
-    @objc func loadDateAndTime() {
+    func loadDateAndTime() {
         // TODO: Get the current time/date
         
         // TODO: extract current time from the date using DateConverter
