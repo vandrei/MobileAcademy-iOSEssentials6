@@ -9,19 +9,27 @@
 import UIKit
 
 class WeekdaysSelectorView: UIView {
-    // TODO: Create an IBOutlet with an array for the buttons
-    
+    @IBOutlet private var buttons: [UIButton]!
     
     func getSelectedDays() -> [NSNumber] {
-        // TODO: Iterate through the buttons in the array and add their tag to an array
-        // TODO: Return the tags array
+        var tagsArray = [NSNumber]()
         
-        return []
+        for button in buttons {
+            if (button.isSelected) {
+                tagsArray.append(NSNumber(integerLiteral: button.tag))
+            }
+        }
+        
+        return tagsArray
     }
     
     func selectDays(_ days:[NSNumber]) {
-        // TODO: Iterate through the buttons in the view
-        // TODO: If the days param contains the button tag, mark the button as selected
+        for button in buttons {
+            let tagNumber = NSNumber(integerLiteral: button.tag)
+            if (days.contains(tagNumber)) {
+                button.isSelected = true
+            }
+        }
     }
     
     fileprivate func configureButtonFont(_ button:UIButton) {
@@ -34,7 +42,8 @@ class WeekdaysSelectorView: UIView {
         }
     }
     
-    // TODO: Add an IBOutlet for the day button tap event
-    // TODO: Inverse the button's selected state
-    // TODO: Update button font according to its state
+    @IBAction func onDayButtonTapped(button: UIButton) {
+        button.isSelected = !button.isSelected
+        configureButtonFont(button)
+    }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D2BDE1B1F9B54E200D6EF38 /* AlarmListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BDE1A1F9B54E200D6EF38 /* AlarmListController.swift */; };
+		2D2BDE1D1F9B6D2A00D6EF38 /* AlarmDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BDE1C1F9B6D2A00D6EF38 /* AlarmDetailsController.swift */; };
 		2D6D29481CAD5869001A6B65 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D29471CAD5869001A6B65 /* Day.swift */; };
 		2D6D294A1CAD58F6001A6B65 /* DayDA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D29491CAD58F6001A6B65 /* DayDA.swift */; };
 		2D6D294C1CAD61B0001A6B65 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D294B1CAD61B0001A6B65 /* Fonts.swift */; };
@@ -47,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D2BDE1A1F9B54E200D6EF38 /* AlarmListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListController.swift; sourceTree = "<group>"; };
+		2D2BDE1C1F9B6D2A00D6EF38 /* AlarmDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailsController.swift; sourceTree = "<group>"; };
 		2D6D29471CAD5869001A6B65 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		2D6D29491CAD58F6001A6B65 /* DayDA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayDA.swift; sourceTree = "<group>"; };
 		2D6D294B1CAD61B0001A6B65 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -189,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				2DD843401CAD51E600E5778B /* Base */,
+				2D2BDE1A1F9B54E200D6EF38 /* AlarmListController.swift */,
+				2D2BDE1C1F9B6D2A00D6EF38 /* AlarmDetailsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -389,6 +395,7 @@
 				2DD843421CAD51F900E5778B /* BaseController.swift in Sources */,
 				2DD8433A1CAD504A00E5778B /* AlarmDA.swift in Sources */,
 				2DD843381CAD4FEE00E5778B /* CoreDataManager.swift in Sources */,
+				2D2BDE1D1F9B6D2A00D6EF38 /* AlarmDetailsController.swift in Sources */,
 				2D6D294F1CAD6A0F001A6B65 /* WeekdaysSelectorView.swift in Sources */,
 				2DD843361CAD4FAD00E5778B /* BaseDA.swift in Sources */,
 				8C1E9AF31CB00C5C00E3DA9F /* NotificationsScheduler.swift in Sources */,
@@ -396,6 +403,7 @@
 				2DD8433E1CAD50A300E5778B /* Alarm.swift in Sources */,
 				2D771B3D1CAE9279006668CF /* NowInfoView.swift in Sources */,
 				8C1E9AF11CB00C5C00E3DA9F /* AlarmManager.swift in Sources */,
+				2D2BDE1B1F9B54E200D6EF38 /* AlarmListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

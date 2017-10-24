@@ -54,18 +54,21 @@ class TimeInputField: UITextField {
     
     // Sets a spinning picker as input source for the text field
     fileprivate func setPickerInputView() {
-        // TODO: Instantiate an UIDatePicker()
-        // TODO: Set picker mode for time
-        // TODO: Set picker locale to RO
-        // TODO: Add picker target
-        // TODO: Set the new picker as inputview for the textfield
+        let picker = UIDatePicker()
+        picker.datePickerMode = .time
+        picker.locale = Locale(identifier: "RO")
+        picker.addTarget(self, action: #selector(didSelectDate(_:)), for: UIControlEvents.valueChanged)
+        
+        inputView = picker
     }
     
     // Sets a Toolbar with a "Done" button on the input view
     fileprivate func setAccessoryInputView() {
-        // TODO: Instantiate a toolbar
-        // TODO: Set Default style for barStyle
-        // TODO: Put only "Done" button in the toolbar items
-        // TODO: Set the toolbar as accessory view
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 300, height: 44))
+        
+        toolbar.barStyle = .default
+        toolbar.items = [UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(dismissInputView))]
+        
+        self.inputAccessoryView = toolbar
     }
 }
