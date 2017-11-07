@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D2BDE1B1F9B54E200D6EF38 /* AlarmListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BDE1A1F9B54E200D6EF38 /* AlarmListController.swift */; };
 		2D2BDE1D1F9B6D2A00D6EF38 /* AlarmDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BDE1C1F9B6D2A00D6EF38 /* AlarmDetailsController.swift */; };
+		2D3E67021FADBB14008E290C /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3E67011FADBB14008E290C /* AlarmCell.swift */; };
 		2D6D29481CAD5869001A6B65 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D29471CAD5869001A6B65 /* Day.swift */; };
 		2D6D294A1CAD58F6001A6B65 /* DayDA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D29491CAD58F6001A6B65 /* DayDA.swift */; };
 		2D6D294C1CAD61B0001A6B65 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D294B1CAD61B0001A6B65 /* Fonts.swift */; };
@@ -46,11 +47,13 @@
 		8C1E9AFC1CB00C7800E3DA9F /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1E9AFA1CB00C7800E3DA9F /* NavigationManager.swift */; };
 		8C1E9AFF1CB00C8500E3DA9F /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1E9AFD1CB00C8500E3DA9F /* DateConverter.swift */; };
 		8C1E9B001CB00C8500E3DA9F /* DayConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1E9AFE1CB00C8500E3DA9F /* DayConverter.swift */; };
+		EF338AAD0EBD73F5ABB85DAE /* Pods_weatherwake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A5DC0DC16912A22F6C593F /* Pods_weatherwake.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D2BDE1A1F9B54E200D6EF38 /* AlarmListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListController.swift; sourceTree = "<group>"; };
 		2D2BDE1C1F9B6D2A00D6EF38 /* AlarmDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailsController.swift; sourceTree = "<group>"; };
+		2D3E67011FADBB14008E290C /* AlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
 		2D6D29471CAD5869001A6B65 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		2D6D29491CAD58F6001A6B65 /* DayDA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayDA.swift; sourceTree = "<group>"; };
 		2D6D294B1CAD61B0001A6B65 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -90,6 +93,7 @@
 		8C1E9AFA1CB00C7800E3DA9F /* NavigationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		8C1E9AFD1CB00C8500E3DA9F /* DateConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		8C1E9AFE1CB00C8500E3DA9F /* DayConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayConverter.swift; sourceTree = "<group>"; };
+		A1543B70F0064CC7FCDD0866 /* Pods-weatherwake.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherwake.release.xcconfig"; path = "Pods/Target Support Files/Pods-weatherwake/Pods-weatherwake.release.xcconfig"; sourceTree = "<group>"; };
 		D7A5DC0DC16912A22F6C593F /* Pods_weatherwake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weatherwake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,6 +105,7 @@
 				2D771B491CAEAED2006668CF /* AVFoundation.framework in Frameworks */,
 				8C1E9AD61CAE8A0200E3DA9F /* CoreLocation.framework in Frameworks */,
 				2DD843321CAD4DC200E5778B /* CoreData.framework in Frameworks */,
+				EF338AAD0EBD73F5ABB85DAE /* Pods_weatherwake.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +123,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1F43ACF4808F29919E1FE48C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1543B70F0064CC7FCDD0866 /* Pods-weatherwake.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2D6D294D1CAD69F3001A6B65 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +140,7 @@
 				2D6D29501CAD6D56001A6B65 /* TimeField.swift */,
 				2D6D29541CAD9613001A6B65 /* ColoredPlaceholderTextField.swift */,
 				2D771B3C1CAE9279006668CF /* NowInfoView.swift */,
+				2D3E67011FADBB14008E290C /* AlarmCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,6 +248,7 @@
 				2DDDB1301CAD44AF00EAC327 /* weatherwake */,
 				2DDDB12F1CAD44AF00EAC327 /* Products */,
 				1EF84B160A33B88B7230859D /* Frameworks */,
+				1F43ACF4808F29919E1FE48C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -306,9 +321,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DDDB1431CAD44B000EAC327 /* Build configuration list for PBXNativeTarget "weatherwake" */;
 			buildPhases = (
+				82A80243C166BAC316D9438D /* [CP] Check Pods Manifest.lock */,
 				2DDDB12A1CAD44AF00EAC327 /* Sources */,
 				2DDDB12B1CAD44AF00EAC327 /* Frameworks */,
 				2DDDB12C1CAD44AF00EAC327 /* Resources */,
+				7F7D52CBADFA70512DF5FEAE /* [CP] Embed Pods Frameworks */,
+				3B1C1927DCEA2D9F4D856B2A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,6 +390,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3B1C1927DCEA2D9F4D856B2A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-weatherwake/Pods-weatherwake-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F7D52CBADFA70512DF5FEAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-weatherwake/Pods-weatherwake-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-weatherwake/Pods-weatherwake-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82A80243C166BAC316D9438D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-weatherwake-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2DDDB12A1CAD44AF00EAC327 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -383,6 +455,7 @@
 				2D6D294A1CAD58F6001A6B65 /* DayDA.swift in Sources */,
 				2D6D29511CAD6D56001A6B65 /* TimeField.swift in Sources */,
 				2D6D29F11CADA9DB001A6B65 /* Weekdays.swift in Sources */,
+				2D3E67021FADBB14008E290C /* AlarmCell.swift in Sources */,
 				8C1E9AF41CB00C5C00E3DA9F /* NotificationsWrapper.swift in Sources */,
 				2D6D29551CAD9613001A6B65 /* ColoredPlaceholderTextField.swift in Sources */,
 				8C1E9AFC1CB00C7800E3DA9F /* NavigationManager.swift in Sources */,
@@ -473,6 +546,7 @@
 		};
 		2DDDB1451CAD44B000EAC327 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1543B70F0064CC7FCDD0866 /* Pods-weatherwake.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = weatherwake/Info.plist;
@@ -480,6 +554,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.mready.weatherwake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

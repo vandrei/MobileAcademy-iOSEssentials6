@@ -14,6 +14,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        
+        let userDefaults = UserDefaults.standard
+        if var openCount = userDefaults.value(forKey: "app_open") as? Int {
+            openCount += 1
+            userDefaults.setValue(openCount, forKey: "app_open")
+            print("App was openened \(openCount) times")
+        } else {
+            userDefaults.setValue(1, forKey: "app_open")
+        }
+        
         /* TODO: Uncomment this after creating CoreData Models
          
          DayDA.createWeekdaysIfNecessary()

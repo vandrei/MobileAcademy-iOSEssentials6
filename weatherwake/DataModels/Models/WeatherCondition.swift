@@ -28,12 +28,16 @@ class WeatherCondition : NSObject {
         return [WeatherCondition]()
     }
     
-    init(json: [String : AnyObject]) {
-        // TODO: Deserialize the JSON received as parameter
-        // TODO: Extract temp, temp_min, temp_max, use the first WeatherCondition found
+    init(json: [String : Any]) {
+        city = json["name"] as! String
         
-        // TODO: Extract time from "dt", convert it to NSTimeInterval, make it a CDouble
-        // TODO: Create a NSDate with the epoch timestamp extracted
+        let mainDict = json["main"] as! [String: Any]
+        temperature = mainDict["temp"] as! Double
+        minTemperature = mainDict["temp_min"] as! Double
+        maxTemperature = mainDict["temp_max"] as! Double
+        
+        let timestamp = json["dt"] as! Int
+        date = Date(timeIntervalSince1970: TimeInterval(timestamp))
     }
     
     func getTemperature() -> String {
