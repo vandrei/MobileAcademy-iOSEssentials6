@@ -41,7 +41,6 @@ class AlarmListController: BaseController, UITableViewDataSource, UITableViewDel
 
         Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil)
             .responseJSON { (dataResponse) in
-                dataResponse.
                 let jsonResponse = dataResponse.result.value as! [String: Any]
                 let weatherCondition = WeatherCondition(json: jsonResponse)
         }

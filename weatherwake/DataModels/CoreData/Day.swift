@@ -12,5 +12,5 @@ class Day: NSManagedObject {
     @NSManaged var id: NSNumber!
     @NSManaged var name: String!
     
-    @NSManaged var alarm: Alarm!
+    @NSManaged var alarms: Set<Alarm>!
 }

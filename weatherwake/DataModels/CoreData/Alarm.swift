@@ -9,12 +9,18 @@
 import CoreData
 
 class Alarm: NSManagedObject {
-    var id: String!
+    @NSManaged var id: String!
     
-    var name: String!
-    var sound: String!
-    var date: Date!
-    var isOn: NSNumber!
+    @NSManaged var name: String!
+    @NSManaged var sound: String!
+    @NSManaged var date: Date!
+    @NSManaged var isOn: NSNumber!
     
-    var days: Set<Day>!
+    @NSManaged var days: Set<Day>!
+    
+    var hasCustomSound: Bool {
+        get {
+            return sound != "default"
+        }
+    }
 }
