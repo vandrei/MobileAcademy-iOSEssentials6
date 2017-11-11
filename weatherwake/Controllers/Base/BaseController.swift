@@ -36,6 +36,6 @@ class BaseController: UIViewController {
     }
     
     func goBack() {
-        let _ = self.navigationController?.popViewController(animated: true)
+        _ = self.navigationController?.popViewController(animated: true)
     }
 }

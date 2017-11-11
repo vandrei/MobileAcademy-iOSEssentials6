@@ -9,7 +9,21 @@
 import UIKit
 
 class AlarmDetailsController: BaseController {
-    @IBAction func onTrashTapped() {
+    var alarm: Alarm!
+    @IBOutlet private weak var titleField: UITextField!
+    
+    @IBAction func onSaveTapped() {
+        alarm.name = titleField.text
+        AlarmDA().save()
         self.navigationController?.popViewController(animated: true)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        if (alarm != nil){
+             titleField.text = alarm.name
+        }
+    }
+        
+    
 }

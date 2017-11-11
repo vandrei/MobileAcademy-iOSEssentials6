@@ -10,17 +10,20 @@ import UIKit
 import Alamofire
 
 class AlarmListController: BaseController, UITableViewDataSource, UITableViewDelegate, AlarmCellDelegate {
+    @IBOutlet private weak var alarmTableView: UITableView!
+    var databaseAlarms: [Alarm] = []
+    
     func onSwitchChanged(alarm: Alarm?) {
         print("Hello from Controller IMplemented Delegate")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return databaseAlarms.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "alarmCell") as! AlarmCell
-        
+        cell.load(alarm: databaseAlarms[indexPath.row])
         cell.delegate = self
         
         return cell
@@ -30,6 +33,15 @@ class AlarmListController: BaseController, UITableViewDataSource, UITableViewDel
         super.viewDidLoad()
         
         requestWeatherCondition()
+        databaseAlarms = AlarmDA().getAllAlarms()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        databaseAlarms = AlarmDA().getAllAlarms()
+        alarmTableView.reloadData()
+        
     }
     
     func requestWeatherCondition() {
@@ -46,6 +58,17 @@ class AlarmListController: BaseController, UITableViewDataSource, UITableViewDel
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "createAlarmSegue" {
+            (segue.destination as! AlarmDetailsController).alarm = AlarmDA().createAlarm()
+        }
+        
+        if (segue.identifier == "cellAutoSegue") {
+            let cell = sender as! AlarmCell
+            let indexPath = alarmTableView.indexPath(for: cell)!
+            (segue.destination as! AlarmDetailsController).alarm = databaseAlarms[indexPath.row]
+        }
+    }
     
     @IBAction func onButtonDragOutside(_ sender: Any) {
     }

@@ -23,6 +23,7 @@ class AlarmCell: UITableViewCell {
     
     func load(alarm: Alarm) {
         self.alarm = alarm
+        titleLabel.text = alarm.name
     }
 
     @IBAction private func onSwitchChanged() {

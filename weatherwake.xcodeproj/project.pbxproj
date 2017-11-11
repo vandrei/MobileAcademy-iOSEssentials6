@@ -51,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D2429CA1FB7085800E208D4 /* weatherwake 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "weatherwake 2.xcdatamodel"; sourceTree = "<group>"; };
 		2D2BDE1A1F9B54E200D6EF38 /* AlarmListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListController.swift; sourceTree = "<group>"; };
 		2D2BDE1C1F9B6D2A00D6EF38 /* AlarmDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailsController.swift; sourceTree = "<group>"; };
 		2D3E67011FADBB14008E290C /* AlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
@@ -584,6 +585,7 @@
 		2DD843281CAD4ACF00E5778B /* weatherwake.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				2D2429CA1FB7085800E208D4 /* weatherwake 2.xcdatamodel */,
 				2DD843291CAD4ACF00E5778B /* weatherwake.xcdatamodel */,
 			);
 			currentVersion = 2DD843291CAD4ACF00E5778B /* weatherwake.xcdatamodel */;

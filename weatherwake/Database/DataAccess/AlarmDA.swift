@@ -20,21 +20,33 @@ class AlarmDA: BaseDA {
     func createAlarm() -> Alarm {
         // TODO: Create a CoreData Alarm object
         // TODO: Init object with id, default name, default sound
-
-        return Alarm()
+        let newAlarm = super.create() as! Alarm
+        
+        newAlarm.id = UUID().uuidString
+        newAlarm.name = DEFAULT_ALARM_NAME
+        newAlarm.sound = DEFAULT_SOUND
+        
+        return newAlarm
     }
     
     func getAllAlarms() -> [Alarm] {
         // TODO: Fetch Alarm objects
+        let sortDescriptors = [NSSortDescriptor(key: "date", ascending: true),
+                               NSSortDescriptor(key: "name", ascending: true)]
         
-        return []
+        return super.fetchObjects(nil, sortDescriptors: sortDescriptors) as! [Alarm]
     }
     
     func getAlarm(_ id:String) -> Alarm? {
         // TODO: Create a predicate for the object. Searched object id should be equal to parameter id
         // TODO: Fecth objects with the predicate
         // TODO: Return first object in found array
-        return nil
+        
+        let predicate = NSPredicate(format: "self.id = %@", id)
+        
+        let alarms = super.fetchObjects(predicate, sortDescriptors: nil) as! [Alarm]
+        
+        return alarms.first
     }
     
     func deleteAlarm(_ alarm:Alarm) {
