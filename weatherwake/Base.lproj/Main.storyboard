@@ -256,7 +256,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHU-KR-hOv">
-                                <rect key="frame" x="16" y="80" width="343" height="34"/>
+                                <rect key="frame" x="16" y="100" width="343" height="34"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7uL-os-CrQ">
                                         <rect key="frame" x="294" y="1.5" width="51" height="31"/>
@@ -298,7 +298,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5v-bi-Ofi">
-                                <rect key="frame" x="16" y="122" width="160" height="50"/>
+                                <rect key="frame" x="16" y="142" width="160" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="13:58" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RJU-fb-tv3" customClass="TimeInputField" customModule="weatherwake" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
@@ -319,7 +319,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWf-dD-KFw" customClass="WeekdaysSelectorView" customModule="weatherwake" customModuleProvider="target">
-                                <rect key="frame" x="16" y="180" width="343" height="44"/>
+                                <rect key="frame" x="16" y="200" width="343" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdQ-Ws-huz">
                                         <rect key="frame" x="0.0" y="0.0" width="49" height="44"/>
@@ -434,19 +434,19 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hey-62-Pne">
-                                <rect key="frame" x="16" y="240" width="102" height="21"/>
+                                <rect key="frame" x="16" y="260" width="102" height="21"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5h-6J-2Dl">
-                                <rect key="frame" x="58" y="277" width="51" height="19"/>
+                                <rect key="frame" x="58" y="297" width="51" height="19"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_on" translatesAutoresizingMaskIntoConstraints="NO" id="m9j-TN-OhA">
-                                <rect key="frame" x="24" y="274" width="24" height="24"/>
+                                <rect key="frame" x="24" y="294" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="XNs-FB-Dzf"/>
                                     <constraint firstAttribute="height" constant="24" id="ihx-iY-ihS"/>

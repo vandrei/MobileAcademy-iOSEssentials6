@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D2429CD1FB7402E00E208D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D2429CB1FB73CD700E208D4 /* GoogleService-Info.plist */; };
 		2D2BDE1B1F9B54E200D6EF38 /* AlarmListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BDE1A1F9B54E200D6EF38 /* AlarmListController.swift */; };
 		2D2BDE1D1F9B6D2A00D6EF38 /* AlarmDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BDE1C1F9B6D2A00D6EF38 /* AlarmDetailsController.swift */; };
 		2D3E67021FADBB14008E290C /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3E67011FADBB14008E290C /* AlarmCell.swift */; };
@@ -52,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		2D2429CA1FB7085800E208D4 /* weatherwake 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "weatherwake 2.xcdatamodel"; sourceTree = "<group>"; };
+		2D2429CB1FB73CD700E208D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2D2429CC1FB73DEF00E208D4 /* weatherwake.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = weatherwake.entitlements; sourceTree = "<group>"; };
 		2D2BDE1A1F9B54E200D6EF38 /* AlarmListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListController.swift; sourceTree = "<group>"; };
 		2D2BDE1C1F9B6D2A00D6EF38 /* AlarmDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailsController.swift; sourceTree = "<group>"; };
 		2D3E67011FADBB14008E290C /* AlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
@@ -264,7 +267,9 @@
 		2DDDB1301CAD44AF00EAC327 /* weatherwake */ = {
 			isa = PBXGroup;
 			children = (
+				2D2429CC1FB73DEF00E208D4 /* weatherwake.entitlements */,
 				2DDDB1311CAD44AF00EAC327 /* AppDelegate.swift */,
+				2D2429CB1FB73CD700E208D4 /* GoogleService-Info.plist */,
 				2DDDB1401CAD44B000EAC327 /* Info.plist */,
 				8C1E9AEC1CB00C0400E3DA9F /* DataConverters */,
 				8C1E9AEB1CB00BFF00E3DA9F /* Managers */,
@@ -350,7 +355,13 @@
 				TargetAttributes = {
 					2DDDB12D1CAD44AF00EAC327 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = U25ZWZE6YN;
 						LastSwiftMigration = 0810;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -384,6 +395,7 @@
 				2DD8434E1CAD55AD00E5778B /* Roboto-Light.ttf in Resources */,
 				2D771B3B1CAE8FE6006668CF /* SuperRingtone.caf in Resources */,
 				2DDDB1371CAD44AF00EAC327 /* Main.storyboard in Resources */,
+				2D2429CD1FB7402E00E208D4 /* GoogleService-Info.plist in Resources */,
 				2D771B391CAE8FE6006668CF /* ElegantRingtone.caf in Resources */,
 				2D771B3A1CAE8FE6006668CF /* RisingSun.caf in Resources */,
 			);
@@ -415,10 +427,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-weatherwake/Pods-weatherwake-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -550,10 +568,12 @@
 			baseConfigurationReference = A1543B70F0064CC7FCDD0866 /* Pods-weatherwake.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = weatherwake/weatherwake.entitlements;
+				DEVELOPMENT_TEAM = U25ZWZE6YN;
 				INFOPLIST_FILE = weatherwake/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.mready.weatherwake;
+				PRODUCT_BUNDLE_IDENTIFIER = net.mready.weatherwakema6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
